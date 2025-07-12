@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">new-instagram-clone</string>
+    <string name="title_activity_main">new-instagram-clone</string>
+    <string name="package_name">com.newinstagramclone.app</string>
+    <string name="custom_url_scheme">com.newinstagramclone.app</string>
+</resources>
