@@ -7,17 +7,11 @@
         <v-toolbar-title>Direct Messages</v-toolbar-title>
     </v-app-bar>
 
-    <v-text-field 
-        class="slide-in pa-4 rounded" 
-        placeholder="Search messages" 
-        prepend-inner-icon="mdi-magnify" 
-        outlined 
-        dense 
-        v-model="searchQuery" 
-        @keyup.enter="searchMessages">
+    <v-text-field class="pa-4 rounded" placeholder="Search messages" prepend-inner-icon="mdi-magnify" outlined dense
+        v-model="searchQuery" @keyup.enter="searchMessages">
     </v-text-field>
 
-    <v-container class="slide-in">
+    <v-container>
         <v-card v-for="message in filteredMessages" :key="message.id" class="mb-2">
             <v-card-title class="d-flex align-center">
                 <v-avatar size="32">
@@ -61,5 +55,16 @@ export default {
 </script>
 
 <style scoped>
-/* Add any custom styles here */
+.slide-in {
+    animation: slideIn 0.25s ease-out forwards;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 </style>

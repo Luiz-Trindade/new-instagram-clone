@@ -26,17 +26,4 @@
     opacity: 1;
   }
 }
-
-.slide-in {
-  animation: slideIn 0.25s ease-out forwards;
-  opacity: 0;
-  transform: translateX(50px);
-}
-
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 </style>
