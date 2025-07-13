@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar scroll-behavior="hide" class="background-blur elevation-4" theme="system" color="primary" dark>
+  <v-app-bar class="elevation-4">
     <template #title>
       <span class="cursive-title">
         <b>
@@ -8,11 +8,11 @@
       </span>
     </template>
 
-    <v-btn class="ml-auto" icon>
+    <v-btn class="ml-auto" icon @click="navigateTo('/notifications')">
       <v-icon>mdi-heart</v-icon>
     </v-btn>
 
-    <v-btn icon>
+    <v-btn icon @click="navigateTo('/direct')">
       <v-icon>mdi-send</v-icon>
     </v-btn>
   </v-app-bar>
@@ -20,8 +20,15 @@
   <home-posts></home-posts>
 </template>
 
-<script setup>
-// 
+<script>
+export default {
+  name: 'Home',
+  methods: {
+    navigateTo(routeName) {
+      this.$router.push({ name: routeName });
+    },
+  },
+};
 </script>
 
 <style>

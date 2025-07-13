@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation class="background-blur elevation-4" v-model="active_page">
+    <v-bottom-navigation class="elevation-4" v-model="active_page">
         <v-btn icon value="home" @click="navigateTo('/')">
             <v-icon>mdi-home</v-icon>
         </v-btn>
