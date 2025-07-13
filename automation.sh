@@ -6,6 +6,7 @@ cd android/ &&
 ./gradlew assembleDebug &&
 cd .. &&
 read -p "Enter your message commit: " message_commit &&
+git add . &&
 git commit -am "$message_commit" &&
 git push &&
 echo "Build and commit successful!" ||
