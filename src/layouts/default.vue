@@ -30,7 +30,7 @@
 .slide-in {
   animation: slideIn 0.25s ease-out forwards;
   opacity: 0;
-  transform: translateX(100%);
+  transform: translateX(100vw);
 }
 
 @keyframes slideIn {
